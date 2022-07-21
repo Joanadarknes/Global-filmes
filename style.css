@@ -1,0 +1,15 @@
+body{
+    background-color:rgb(221, 221, 221);
+}
+.nav-extended{
+    background-image: url("./img/img.svg");
+    background-size: cover;
+}
+
+nav ul li.active , .tab a.active{
+    border-bottom: solid 2px #fff;
+}
+
+.nav-header h1{
+text-shadow: 2px 2px 8px #000000;
+}
