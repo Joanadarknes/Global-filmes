@@ -1,5 +1,20 @@
 <?php include "cabecalho.php" ?>
 
+
+<?php
+
+$filme1 = [
+  "titulo"=>"Vingadores: Ultimato",
+  "nota" => 8.6,
+  "sinopse" => "",
+  "poster" => ""
+
+
+];
+
+
+
+?>
 <body>
 
   <nav class="nav-extended grey darken-3">
@@ -33,7 +48,7 @@
         </div>
         <div class="card-content">
           <p class="valign-wrapper"><i class="material-icons amber-text">star</i>9,7</p>
-          <span class="card-title">Vingadores </span>
+          <span class="card-title"><?php echo $filme1["titulo"] ?></span>
           <p>Após os eventos devastadores de "Vingadores: Guerra Infinita", o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências.</p>
         </div>
       </div>

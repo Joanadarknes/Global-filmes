@@ -22,22 +22,27 @@
     </nav>
 
     <div class="row">
+        <form action="inserirFilme.php">
         <div class="col s6 offset-s3">
             <div class="card">
                 <div class="card-content">
                     <span class="card-title">Cadastrar Filme</span>
+
+
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="titulo" type="text" class="validate" require>
-                            <label for="titulo">Titulo do filme</label>
+                             <label for="titulo">Titulo do filme</label>
                         </div>
                     </div>
+
+
+
                     <div class="row">
-                        <form class="col s12">
                             <div class="row">
                                 <div class="input-field col s12">
                                     <textarea id="sinopse" class="materialize-textarea"></textarea>
-                                    <label for="sinopse">Sinopse</label>
+                                 <label for="sinopse">Sinopse</label> 
                                 </div>
                             </div>
                         </form>
@@ -46,7 +51,7 @@
                     <div class="row">
                         <div class="input-field col s4">
                             <input id="nota" type="number" step=".1" min=0 max=10 class="validate" require>
-                            <label for="nota">Nota</label>
+                   <label for="nota">Nota</label> 
                         </div>
                     </div>
                 
