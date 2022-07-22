@@ -63,69 +63,27 @@ $filmes = [$filme1,$filme2,$filme3,$filme4];
 
 
   <div class="row">
-<?php for ($i=0; $i<count($filmes); $i++) { ?>
+<?php  foreach($filmes as $filme) : ?>
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="<?=$filme1 ["poster"] ?>"> 
+          <img src="<?=$filme ["poster"] ?>"> 
           <a class="btn-floating halfway-fab waves-effect waves-light red">
             <i class="material-icons">favorite_border</i>
           </a>
         </div>
         <div class="card-content">
           <p class="valign-wrapper">
-            <i class="material-icons amber-text">star</i><?= $filme1 ["nota"] ?>
+            <i class="material-icons amber-text">star</i><?= $filme ["nota"] ?>
           </p>
-          <span class="card-title"><?= $filme1["titulo"] ?></span>
-          <p><?= $filme1["sinopse"] ?></p>
+          <span class="card-title"><?= $filme["titulo"] ?></span>
+          <p><?= $filme["sinopse"] ?></p>
         </div>
       </div>
     </div>
-<?php } ?>
-    <div class="col s3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="<?=$filme2 ["poster"] ?>">
+<?php endforeach ?>
 
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-        </div>
-        <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme2 ["nota"] ?></p>
-          <span class="card-title"><?= $filme2["titulo"] ?></span>
-          <p><?= $filme2["sinopse"] ?></p>
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="<?=$filme3 ["poster"] ?>">
-
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-        </div>
-        <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme3 ["nota"] ?></p>
-          <span class="card-title"><?= $filme3["titulo"] ?></span>
-          <p><?= $filme3["sinopse"] ?></p>
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="<?=$filme4 ["poster"] ?>">
-
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-        </div>
-        <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme4 ["nota"] ?></p>
-          <span class="card-title"><?= $filme4["titulo"] ?></span>
-          <p><?= $filme4["sinopse"] ?></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
 </body>
 
 </html>
