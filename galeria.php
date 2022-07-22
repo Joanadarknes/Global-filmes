@@ -6,13 +6,37 @@
 $filme1 = [
   "titulo"=>"Vingadores: Ultimato",
   "nota" => 8.6,
-  "sinopse" => "",
-  "poster" => ""
+  "sinopse" => "Após os eventos devastadores de Vingadores Ultimato , o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências.",
+  "poster" => "https://www.themoviedb.org/t/p/original/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg"
+
+
+];
+$filme2 = [
+  "titulo"=>"Ad Astra - Rumo às Estrelas",
+  "nota" => 8.6,
+  "sinopse" => "Roy McBride é um engenheiro espacial, portador de um leve grau de autismo, que decide empreender a maior jornada de sua vida: viajar para o espaço, cruzar a galáxia e tentar descobrir o que aconteceu com seu pai, um astronauta que se perdeu há vinte anos atrás no caminho para Netuno.",
+  "poster" => "https://www.themoviedb.org/t/p/original/wigZBAmNrIhxp2FNGOROUAeHvdh.jpg"
+
+
+];
+$filme3 = [
+  "titulo"=>"Thor: Amor e Trovão",
+  "nota" => 8.6,
+  "sinopse" => "Thor parte em uma jornada diferente de tudo que já enfrentou – uma busca pela paz interior. Mas sua aposentadoria é interrompida por um assassino galáctico conhecido como Gorr, o Carniceiro de Deus, que busca a extinção dos deuses. Para combater a ameaça, Thor pede a ajuda do Rei Valquíria, Korg e da ex-namorada Jane Foster, que – para surpresa de Thor – inexplicavelmente empunha seu martelo mágico, Mjolnir, como o Poderoso Thor. Juntos, eles embarcam em uma angustiante aventura cósmica para descobrir o mistério da vingança do God Butcher e detê-lo antes que seja tarde demais.",
+  "poster" => "https://www.themoviedb.org/t/p/original/6OEBp0Gqv6DsOgi8diPUslT2kbA.jpg"
+
+
+];
+$filme4 = [
+  "titulo"=>"Lightyear",
+  "nota" => 8.6,
+  "sinopse" => "A aventura de ação e ficção científica apresenta a história de origem definitiva de Buzz Lightyear - o herói que inspirou o brinquedo - apresentando o lendário Space Ranger que conquistaria gerações de fãs.",
+  "poster" => "https://www.themoviedb.org/t/p/original/egrrHqIIWRTDK0rwqU4AO0OT9i4.jpg"
 
 
 ];
 
-
+$filmes = [$filme1,$filme2,$filme3,$filme4];
 
 ?>
 <body>
@@ -39,59 +63,64 @@ $filme1 = [
 
 
   <div class="row">
+<?php for ($i=0; $i<count($filmes); $i++) { ?>
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="https://www.themoviedb.org/t/p/original/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg">
+          <img src="<?=$filme1 ["poster"] ?>"> 
+          <a class="btn-floating halfway-fab waves-effect waves-light red">
+            <i class="material-icons">favorite_border</i>
+          </a>
+        </div>
+        <div class="card-content">
+          <p class="valign-wrapper">
+            <i class="material-icons amber-text">star</i><?= $filme1 ["nota"] ?>
+          </p>
+          <span class="card-title"><?= $filme1["titulo"] ?></span>
+          <p><?= $filme1["sinopse"] ?></p>
+        </div>
+      </div>
+    </div>
+<?php } ?>
+    <div class="col s3">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="<?=$filme2 ["poster"] ?>">
 
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i>9,7</p>
-          <span class="card-title"><?php echo $filme1["titulo"] ?></span>
-          <p>Após os eventos devastadores de "Vingadores: Guerra Infinita", o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências.</p>
+          <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme2 ["nota"] ?></p>
+          <span class="card-title"><?= $filme2["titulo"] ?></span>
+          <p><?= $filme2["sinopse"] ?></p>
         </div>
       </div>
     </div>
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="https://www.themoviedb.org/t/p/original/wigZBAmNrIhxp2FNGOROUAeHvdh.jpg">
+          <img src="<?=$filme3 ["poster"] ?>">
 
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i>9,7</p>
-          <span class="card-title">Ad Astra - Rumo às Estrelas</span>
-          <p>Roy McBride é um engenheiro espacial, portador de um leve grau de autismo, que decide empreender a maior jornada de sua vida: viajar para o espaço, cruzar a galáxia e tentar descobrir o que aconteceu com seu pai, um astronauta que se perdeu há vinte anos atrás no caminho para Netuno.</p>
+          <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme3 ["nota"] ?></p>
+          <span class="card-title"><?= $filme3["titulo"] ?></span>
+          <p><?= $filme3["sinopse"] ?></p>
         </div>
       </div>
     </div>
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="https://www.themoviedb.org/t/p/original/6OEBp0Gqv6DsOgi8diPUslT2kbA.jpg">
+          <img src="<?=$filme4 ["poster"] ?>">
 
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i>9,7</p>
-          <span class="card-title">Thor: Amor e Trovão</span>
-          <p>Thor parte em uma jornada diferente de tudo que já enfrentou – uma busca pela paz interior. Mas sua aposentadoria é interrompida por um assassino galáctico conhecido como Gorr, o Carniceiro de Deus, que busca a extinção dos deuses. Para combater a ameaça, Thor pede a ajuda do Rei Valquíria, Korg e da ex-namorada Jane Foster, que – para surpresa de Thor – inexplicavelmente empunha seu martelo mágico, Mjolnir, como o Poderoso Thor. Juntos, eles embarcam em uma angustiante aventura cósmica para descobrir o mistério da vingança do God Butcher e detê-lo antes que seja tarde demais.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="https://www.themoviedb.org/t/p/original/egrrHqIIWRTDK0rwqU4AO0OT9i4.jpg">
-
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">favorite_border</i></a>
-        </div>
-        <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i>9,7</p>
-          <span class="card-title">Lightyear</span>
-          <p>A aventura de ação e ficção científica apresenta a história de origem definitiva de Buzz Lightyear - o herói que inspirou o brinquedo - apresentando o lendário Space Ranger que conquistaria gerações de fãs.</p>
+          <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme4 ["nota"] ?></p>
+          <span class="card-title"><?= $filme4["titulo"] ?></span>
+          <p><?= $filme4["sinopse"] ?></p>
         </div>
       </div>
     </div>
