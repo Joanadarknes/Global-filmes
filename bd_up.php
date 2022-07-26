@@ -1,6 +1,6 @@
 <?php
 
-$bd = new SQLite3("filme.db");
+$db = new SQLite3('filme.db');
 
 $sql = "DROP TABLE IF EXISTS filmes";
 
@@ -19,7 +19,6 @@ $sql = "CREATE TABLE filmes(
 ";
 
 
-
 $sql = "INSERT INTO filmes (id, titulo, poster, sinopse, nota) VALUES (
     0,
     'vingadores',
@@ -34,4 +33,4 @@ if ($bd->exec($sql))
 else
 echo "\n erro ao inserir filmes\n";
 
-?>
+?> 

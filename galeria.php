@@ -3,7 +3,7 @@
 
 <?php
 
-$bd = new SQLite3("filmes.db");
+$bd = new ("filmes.db");
 $sql = "SELECT * FROM filmes";
 $filmes = $bd->query($sql);
 
@@ -41,7 +41,7 @@ $filme4 = [
 
 ];
 
-// $filmes = [$filme1,$filme2,$filme3,$filme4];
+ $filmes = [$filme1,$filme2,$filme3,$filme4];
 
 ?>
 <body>
